@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Addra — A safer, authentic social hangout</title>
+  <meta name="description" content="Be the first to try Addra — India’s safe, authentic, AI-powered social hangout. Join the waitlist for early access."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css"/>
+  <link rel="icon" href="./assets/logo.svg"/>
+</head>
+<body>
+  <div class="bg-effects" aria-hidden="true">
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+    <canvas id="stars"></canvas>
+  </div>
+
+  <header class="site">
+    <div class="brand">
+      <img src="./assets/logo.svg" alt="Addra logo" class="logo"/>
+      <span class="name">Addra</span>
+    </div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#safety">Safety</a>
+      <a href="#join" class="pill">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <h1>India’s safe, authentic, <span class="grad">AI‑powered</span> hangout</h1>
+        <p class="lede">No stolen pics. Real people or private AI avatars. Smart, positive communities.</p>
+        <div class="stats">
+          <span id="count">—</span> people already joined
+        </div>
+        <div class="cta-row">
+          <a href="#join" class="cta">Get early access</a>
+          <button class="ghost" id="openDemo">See preview</button>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="card3d">
+          <div class="shine"></div>
+          <div class="screen">
+            <div class="ui-pill">Human Verified ✓</div>
+            <div class="ui-pill alt">AI Persona ✨</div>
+            <div class="feed"><div></div><div></div><div></div><div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <h2>What makes Addra different</h2>
+      <div class="grid">
+        <article>
+          <h3>Authenticity by default</h3>
+          <p>Selfie/video verification for real profiles, or choose a privacy‑first AI avatar.</p>
+        </article>
+        <article>
+          <h3>AI moderation</h3>
+          <p>We block stolen images and toxic spam before it reaches your feed.</p>
+        </article>
+        <article>
+          <h3>Regional communities</h3>
+          <p>Join local groups in your language — discover creators near you.</p>
+        </article>
+        <article>
+          <h3>Futuristic & fun</h3>
+          <p>Personalized feeds, gifts/coins, and creator tools as we grow.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="safety">
+      <div class="panel-inner">
+        <h2>Safety first, always</h2>
+        <ul>
+          <li>🔒 No stolen pictures — our AI blocks them.</li>
+          <li>🧑‍💻 Every account is unique — human‑verified or AI persona.</li>
+          <li>🛡️ Original content only — text, video, audio, avatars.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="join" id="join" aria-labelledby="join-title">
+      <div class="join-card">
+        <h2 id="join-title">Join the waitlist</h2>
+        <p class="muted">We’ll email your invite as we roll out.</p>
+        <form id="wl" autocomplete="on">
+          <div class="row">
+            <input id="name" name="name" placeholder="Your name" required minlength="2" maxlength="64"/>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required maxlength="120"/>
+          </div>
+          <button id="joinBtn" class="cta" type="submit">
+            <span class="t">Join waitlist</span><span class="s"></span>
+          </button>
+          <p id="msg" class="msg" role="status" aria-live="polite"></p>
+        </form>
+        <p class="mini">By joining you agree to receive one early‑access email from us. No spam.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div>© <span id="year"></span> Addra</div>
+    <a href="mailto:hello@addra.in" class="mail">hello@addra.in</a>
+  </footer>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="./main.js" type="module"></script>
+</body>
+</html>
